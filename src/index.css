@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-brand-bg: #F5E8C7;
+  --color-brand-brown: #542008;
+  --color-brand-chocolate: #4A1D0A;
+  --color-brand-gold: #F7C744;
+  --color-brand-orange: #E67A19;
+  --color-brand-card: #FAF2DF;
+  --color-brand-cream: #FFF9EE;
+}
+
+@layer base {
+  body {
+    background-color: #F5E8C7;
+    color: #4A1D0A;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Subtle organic floating animation */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes gentle-float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: gentle-float-reverse 7s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.animate-slow-spin {
+  animation: slow-spin 25s linear infinite;
+}
+
+/* Custom scrollbar matching brand */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F0DFC0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C49F6E;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #542008;
+}
