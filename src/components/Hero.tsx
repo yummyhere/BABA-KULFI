@@ -1,36 +1,21 @@
 import React from 'react';
-import { Sparkles, ArrowRight, Award } from 'lucide-react';
+import { Sparkles, Award } from 'lucide-react';
 import { KulfiVisual } from './KulfiVisual';
 import { LoopSquiggleDoodle, MilkMatkaDoodle } from './Doodles';
 
 interface HeroProps {
-  onExploreFlavors: () => void;
+  onExploreFlavors?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onExploreFlavors }) => {
+export const Hero: React.FC<HeroProps> = () => {
   return (
     <section
       id="home"
       aria-label="Hero Section"
       className="relative pt-6 sm:pt-10 pb-16 sm:pb-24 overflow-hidden px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
     >
-      {/* Upper Area: Intro Paragraph & Badges (Matching Reference) */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start relative z-10">
-        {/* Left Column: Intro Copy + CTA Button */}
-        <div className="md:col-span-6 lg:col-span-5 max-w-md pt-2">
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onExploreFlavors}
-              className="inline-flex items-center gap-2 bg-[#542008] hover:bg-[#E67A19] text-[#FFF9EE] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#542008] cursor-pointer"
-            >
-              EXPLORE OUR KULFI
-              <ArrowRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
-
-        {/* Right Top Area: Playful Badges & Doodles (Matching Reference Layout) */}
-        <div className="md:col-span-6 lg:col-span-7 flex justify-end items-center gap-4 sm:gap-6 pr-4 sm:pr-12">
+      {/* Upper Area: Badges (Matching Reference) */}
+      <div className="flex justify-end items-center gap-4 sm:gap-6 pr-4 sm:pr-12 relative z-10">
           {/* Tilted Circle Badge 1: PURE KHOYA */}
           <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-[#F7C744] text-[#542008] flex flex-col items-center justify-center p-2 text-center shadow-md transform -rotate-12 hover:rotate-0 transition-transform duration-300 select-none border-2 border-white/60">
             <span className="font-display text-xs sm:text-sm leading-tight uppercase">
@@ -56,7 +41,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreFlavors }) => {
             <MilkMatkaDoodle className="w-16 h-16 text-[#542008]" />
           </div>
         </div>
-      </div>
 
       {/* Main Dramatic Headline and Floating Kulfi (Matching Reference Composition) */}
       <div className="relative mt-4 sm:mt-8 min-h-[360px] sm:min-h-[460px] md:min-h-[520px] flex items-center">
