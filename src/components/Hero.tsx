@@ -18,11 +18,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreFlavors }) => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start relative z-10">
         {/* Left Column: Intro Copy + CTA Button */}
         <div className="md:col-span-6 lg:col-span-5 max-w-md pt-2">
-          <p className="text-sm sm:text-base text-[#542008]/85 font-medium leading-relaxed">
-            Discover the timeless taste of Jhang's most beloved kulfi. Handcrafted with rich liquid milk, authentic khoya, and generations of tradition since 1974.
-          </p>
-
-          <div className="mt-4 sm:mt-5 flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <button
               onClick={onExploreFlavors}
               className="inline-flex items-center gap-2 bg-[#542008] hover:bg-[#E67A19] text-[#FFF9EE] font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#542008] cursor-pointer"
